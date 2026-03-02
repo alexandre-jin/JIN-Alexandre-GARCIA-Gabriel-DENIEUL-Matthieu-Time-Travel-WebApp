@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TimeTravel Agency — Voyages Temporels</title>
+  <meta name="description" content="TimeTravel Agency - Explorez Paris 1889, le Crétacé et Florence 1504 avec notre agence de voyages temporels." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("23Ws5vVXGthpOq7yo");</script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-brand">⟐ TimeTravel</a>
+    <ul class="nav-links">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#booking">Réserver</a></li>
+      <li><a href="#" id="nav-chat-btn">ChronoBot</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Voyages temporels depuis 2025
+    </div>
+    <h1>
+      Explorez le <span class="glow-text">Temps</span>
+      <span class="subtitle">comme jamais auparavant</span>
+    </h1>
+    <p class="hero-sub">
+      TimeTravel Agency vous transporte à travers les époques les plus fascinantes de l'histoire. Trois destinations extraordinaires vous attendent.
+    </p>
+    <div class="hero-cta">
+      <a href="#destinations" class="btn-primary">
+        Découvrir les destinations →
+      </a>
+      <button class="btn-secondary" id="hero-chat-btn">
+        💬 Parler à ChronoBot
+      </button>
+    </div>
+    <div class="scroll-indicator">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="section" id="destinations">
+    <div class="section-label reveal">Nos époques</div>
+    <h2 class="section-title reveal">Trois voyages, trois mondes</h2>
+    <p class="section-desc reveal">
+      Chaque destination a été minutieusement préparée par nos chrononautes pour vous offrir une expérience immersive et sécurisée.
+    </p>
+    <div class="dest-grid" id="dest-grid"></div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal" id="modal-content"></div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="section-label reveal">Retours de voyage</div>
+    <h2 class="section-title reveal">Ce que disent nos chrononautes</h2>
+    <p class="section-desc reveal">
+      Des voyageurs revenus sains et saufs (la plupart du temps) partagent leur expérience.
+    </p>
+    <div class="testimonials-grid" id="testimonials-grid"></div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section" id="booking">
+    <div class="booking-section">
+      <div class="section-label reveal">Réservation</div>
+      <h2 class="section-title reveal">Planifiez votre voyage</h2>
+      <p class="section-desc reveal">
+        Choisissez votre destination temporelle et préparez-vous pour l'aventure de votre vie.
+      </p>
+      <div id="booking-area" class="reveal"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="brand">⟐ TimeTravel Agency</div>
+    <p>© 2025 — Voyagez dans le temps en toute sécurité.</p>
+    <p style="margin-top:0.3rem;font-size:0.7rem;">Projet fictif — Ynov Campus</p>
+  </footer>
+
+  <!-- CHAT TOGGLE -->
+  <button class="chat-toggle" id="chat-toggle">💬</button>
+
+  <!-- CHAT PANEL -->
+  <div class="chat-panel hidden" id="chat-panel">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">🤖</div>
+        <div>
+          <div class="chat-header-name">ChronoBot</div>
+          <div class="chat-header-status"><span class="dot-green"></span> En ligne</div>
+        </div>
+      </div>
+      <button class="chat-close-btn" id="chat-close">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input-area">
+      <input class="chat-input" id="chat-input" placeholder="Posez votre question..." />
+      <button class="chat-send" id="chat-send">➤</button>
+    </div>
+  </div>
+
+  <!-- App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
